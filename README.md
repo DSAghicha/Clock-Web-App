@@ -2,6 +2,8 @@
 
 ## Version: 1.0.0
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7fd88e68-808c-4069-99b3-9394b2828cbe/deploy-status)](https://app.netlify.com/sites/dsa-clock-web-app/deploys)
+
 A simple basic analog clock for displaying your browser's local time.
 
 ### DARK MODE
