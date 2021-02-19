@@ -1,0 +1,10 @@
+@media (max-width: 700px) {
+    .dark-mode {
+        background: url("../../assets/images/bg-dark-mobile.jpg") no-repeat;
+        background-size: cover;
+    }
+    .light-mode {
+        background: url("../../assets/images/bg-light-mobile.jpeg") no-repeat;
+        background-size: cover;
+    }
+}

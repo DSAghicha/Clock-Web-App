@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+@font-face {
+    font-family: lightFont;
+    src: url("../../assets/fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+    font-family: regularFont;
+    src: url("../../assets/fonts/Poppins-Regular.ttf");
+}
+
+$bg-color: #820505;
+.dark-mode {
+    main {
+        background: url("../../assets/images/bg-dark-dp.jpg") no-repeat;
+        background-size: cover;
+        #date-cr {
+            color: #FFF;
+        }
+        .clock-cr {
+            .clock {
+                background: url("../../assets/images/clock-bg-light.png") no-repeat;
+                background-size: cover;
+            }
+            .min::before,
+            .sec::before {
+                background-color: #FFF;
+            }
+        }
+    }
+}
+
+.light-mode {
+    main {
+        background: url("../../assets/images/bg-light-dp.jpg") no-repeat;
+        background-size: cover;
+        #date-cr {
+            color: #000;
+        }
+        .clock-cr {
+            .clock {
+                background: url("../../assets/images/clock-bg-dark.png") no-repeat;
+                background-size: cover;
+            }
+            .min::before,
+            .sec::before {
+                background-color: #000;
+            }
+        }
+    }
+}

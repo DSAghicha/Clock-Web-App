@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
+@font-face {
+  font-family: lightFont;
+  src: url("../../assets/fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: regularFont;
+  src: url("../../assets/fonts/Poppins-Regular.ttf");
+}
+
+.dark-mode main {
+  background: url("../../assets/images/bg-dark-dp.jpg") no-repeat;
+  background-size: cover;
+}
+
+.dark-mode main #date-cr {
+  color: #FFF;
+}
+
+.dark-mode main .clock-cr .clock {
+  background: url("../../assets/images/clock-bg-light.png") no-repeat;
+  background-size: cover;
+}
+
+.dark-mode main .clock-cr .min::before,
+.dark-mode main .clock-cr .sec::before {
+  background-color: #FFF;
+}
+
+.light-mode main {
+  background: url("../../assets/images/bg-light-dp.jpg") no-repeat;
+  background-size: cover;
+}
+
+.light-mode main #date-cr {
+  color: #000;
+}
+
+.light-mode main .clock-cr .clock {
+  background: url("../../assets/images/clock-bg-dark.png") no-repeat;
+  background-size: cover;
+}
+
+.light-mode main .clock-cr .min::before,
+.light-mode main .clock-cr .sec::before {
+  background-color: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+body nav {
+  background-color: #820505;
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px;
+}
+
+body nav .logo p {
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: none;
+  font-family: 'Merienda', cursive;
+  font-size: 18px;
+  color: #FFF;
+}
+
+body nav svg {
+  fill: #FFF;
+}
+
+body nav a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: regularFont;
+}
+
+body main {
+  width: 100%;
+  height: calc(100vh - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .main-cr {
+  width: 40%;
+  height: 90vh;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+body main .mode-cr {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding-top: 15px;
+  padding-right: 20px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body main .mode-cr #sun,
+body main .mode-cr #moon {
+  position: absolute;
+  cursor: pointer;
+}
+
+body main .mode-cr #sun {
+  fill: #f8bc3b;
+}
+
+body main .mode-cr #moon {
+  display: none;
+  fill: #312d2d;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+body main #date-cr {
+  position: relative;
+  top: 40px;
+  font-size: 18px;
+  font-family: regularFont;
+}
+
+body main .clock-cr {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .clock-cr .clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: url("../../assets/images/clock-bg.png") no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 0 8px 32px 0 rgba(98, 100, 139, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(98, 100, 139, 0.37);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: none;
+}
+
+body main .clock-cr .clock .hours,
+body main .clock-cr .clock .minutes,
+body main .clock-cr .clock .seconds {
+  position: absolute;
+}
+
+body main .clock-cr .clock .hr,
+body main .clock-cr .clock .min,
+body main .clock-cr .clock .sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .clock-cr .clock .hours .hr {
+  width: 160px;
+  height: 160px;
+}
+
+body main .clock-cr .clock .hours .hr::before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 90px;
+  background-color: #c80000;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+body main .clock-cr .clock .minutes .min {
+  width: 190px;
+  height: 190px;
+}
+
+body main .clock-cr .clock .minutes .min::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 110px;
+  border-radius: 6px 6px 0 0;
+  z-index: 11;
+}
+
+body main .clock-cr .clock .seconds .sec {
+  width: 230px;
+  height: 230px;
+}
+
+body main .clock-cr .clock .seconds .sec::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 135px;
+  border-radius: 6px 6px 0 0;
+  z-index: 12;
+}
+
+body .footer p {
+  color: #FFF;
+  font-size: 10px;
+  font-family: lightFont;
+}
+
+body .footer p a {
+  color: #e6d3d3;
+  padding-right: 3px;
+  -webkit-transition: 400ms forwards;
+  transition: 400ms forwards;
+}
+
+body .footer p a:hover {
+  color: #FFF;
+}
+/*# sourceMappingURL=style.css.map */

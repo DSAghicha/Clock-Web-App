@@ -1,0 +1,5 @@
+.jshintrc
+.vscode
+*.txt
+sw.js
+manifest.json
